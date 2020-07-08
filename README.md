@@ -47,3 +47,14 @@
 
 ### 13. Visual results of B100 for x4.
 ![RUNOOB 图标](./results/Fig5.jpg)
+
+
+### If you cite this paper, please the following format:  
+#### 1.Tian C, Zhu R, Wu Z, et al. Lightweight Image Super-Resolution with Enhanced CNN[J]. Knowledge-Based Systems, 2020.  
+#### 2.@article{tian2020lightweight,
+####  title={Lightweight Image Super-Resolution with Enhanced CNN},
+####  author={Tian, Chunwei and Zhuge, Ruibin and Wu, Zhihao and Xu, Yong and Zuo, Wangmeng and Chen, Chen and Lin, Chia-Wen},
+####  journal={Knowledge-Based Systems},
+####  year={2020},
+####  publisher={Elsevier}
+####  }

@@ -18,15 +18,19 @@
 ### cd dataset
 ### python div2h5.py
 
-### Training 
+### Training a model for single scale  
 ### x2
-#### python train.py --patch_size 77 --batch_size 64 --max_steps 600000 --decay 400000 --model cfsrcnn --ckpt_name cfsrcnn --ckpt_dir checkpoint/cfsrcnnx2 --scale 2 --num_gpu 1       
+#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x2 --ckpt_dir checkpoint/lesrcnn_x2 --scale 2 --num_gpu 1       
 
 ### x3
-#### python train.py --patch_size 77 --batch_size 64 --max_steps 600000 --decay 400000 --model cfsrcnn --ckpt_name cfsrcnn --ckpt_dir checkpoint/cfsrcnnx3 --scale 3 --num_gpu 1 
+#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x3 --ckpt_dir checkpoint/lesrcnn_x3 --scale 3 --num_gpu 1 
 
 ### x4
-#### python train.py --patch_size 77 --batch_size 64 --max_steps 600000 --decay 400000 --model cfsrcnn --ckpt_name cfsrcnn --ckpt_dir checkpoint/cfsrcnnx4 --scale 4 --num_gpu 1 
+#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x4 --ckpt_dir checkpoint/lesrcnn_x4 --scale 4 --num_gpu 1 
+
+### Training a model for different scales (also regarded as blind SR)
+#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn --ckpt_dir checkpoint/lesrcnn --scale 0 --num_gpu 1 
+
 
 ### Test 
 ### Single SR mode for x2
@@ -54,6 +58,15 @@
 #### python x4/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 4 --ckpt_path lesrcnn_b/lesrcnn.pth  
 #### --sample_dir samples_singlemodel_urban100_x4
 
+### Using a model to test different scales of 2,3 and 4 (also regarded as blind SR)
+#### python lesrcnn_b/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 2 --ckpt_path lesrcnn_b/lesrcnn.pth  
+#### --sample_dir samples_singlemodel_urban100_x2
+
+#### python lesrcnn_b/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 3 --ckpt_path lesrcnn_b/lesrcnn.pth  
+#### --sample_dir samples_singlemodel_urban100_x3
+
+#### python lesrcnn_b/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 4 --ckpt_path lesrcnn_b/lesrcnn.pth  
+#### --sample_dir samples_singlemodel_urban100_x4 
 
 
 ### The Network architecture, principle and results of LESRCNN

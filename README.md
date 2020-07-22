@@ -116,11 +116,12 @@
 
 
 ### If you cite this paper, please the following format:  
-#### 1.Tian C, Zhu R, Wu Z, et al. Lightweight Image Super-Resolution with Enhanced CNN[J]. Knowledge-Based Systems, 2020.  
+#### 1.Tian C, Zhuge R, Wu Z, et al. Lightweight image super-resolution with enhanced CNN[J]. Knowledge-Based Systems, 2020: 106235.
 #### 2.@article{tian2020lightweight,
 ####  title={Lightweight Image Super-Resolution with Enhanced CNN},
 ####  author={Tian, Chunwei and Zhuge, Ruibin and Wu, Zhihao and Xu, Yong and Zuo, Wangmeng and Chen, Chen and Lin, Chia-Wen},
 ####  journal={Knowledge-Based Systems},
+####  pages={106235},
 ####  year={2020},
 ####  publisher={Elsevier}
 ####  }

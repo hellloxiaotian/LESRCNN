@@ -32,16 +32,16 @@
 
 ### Training a model for single scale  
 ### x2
-#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x2 --ckpt_dir checkpoint/lesrcnn_x2 --scale 2 --num_gpu 1       
+#### python x2/train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x2 --ckpt_dir checkpoint/lesrcnn_x2 --scale 2 --num_gpu 1       
 
 ### x3
-#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x3 --ckpt_dir checkpoint/lesrcnn_x3 --scale 3 --num_gpu 1 
+#### python x3/train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x3 --ckpt_dir checkpoint/lesrcnn_x3 --scale 3 --num_gpu 1 
 
 ### x4
-#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x4 --ckpt_dir checkpoint/lesrcnn_x4 --scale 4 --num_gpu 1 
+#### python x4/train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn_x4 --ckpt_dir checkpoint/lesrcnn_x4 --scale 4 --num_gpu 1 
 
 ### Training a model for different scales (also regarded as blind SR)
-#### python train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn --ckpt_dir checkpoint/lesrcnn --scale 0 --num_gpu 1 
+#### python lesrcnn_b/train.py --patch_size 64 --batch_size 64 --max_steps 600000 --decay 400000 --model lesrcnn --ckpt_name lesrcnn --ckpt_dir checkpoint/lesrcnn --scale 0 --num_gpu 1 
 
 
 ### Test 

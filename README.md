@@ -54,15 +54,6 @@
 ### Single SR model for x4
 #### python x4/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 4 --ckpt_path ./x4/lesrcnn_x4.pth --sample_dir samples_singlemodel_urban100_x4
 
-### Single SR model for x2, x3 and x4
-###  x2
-#### python x2/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 2 --ckpt_path lesrcnn_b/lesrcnn.pth --sample_dir samples_lesrcnn_b_urban100_x2
-
-### x3
-#### python x3/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 3 --ckpt_path lesrcnn_b/lesrcnn.pth --sample_dir samples_singlemodel_urban100_x3
-
-### x4
-#### python x4/tcw_sample.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 4 --ckpt_path lesrcnn_b/lesrcnn.pth  --sample_dir samples_singlemodel_urban100_x4
 
 ### Using a model to test different scales of 2,3 and 4 (also regarded as blind SR)
 #### python lesrcnn_b/tcw_sample_b.py --model lesrcnn --test_data_dir dataset/Urban100 --scale 2 --ckpt_path lesrcnn_b/lesrcnn.pth  --sample_dir samples_singlemodel_urban100_x2

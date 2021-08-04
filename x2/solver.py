@@ -2,7 +2,8 @@ import os
 import random
 import numpy as np
 import scipy.misc as misc
-import skimage.measure as measure
+import skimage.metrics as metrics
+
 from tensorboardX import SummaryWriter
 import torch
 import torch.nn as nn
@@ -184,7 +185,7 @@ class Solver():
             mean_ssim += calculate_ssim(im1,im2)/len(test_data)
             #mean_psnr1 += psnr(im3, im4) / len(test_data)
             #print 'step is %d, mean_psnr is %f' %(step,mean_psnr)
-        print 'epochs is %d, mean_psnr is %f, mean_ssim is %f' %(self.step,mean_psnr,mean_ssim)
+        print("Epoch: {}, M-PSNR: {}, M-SSIM: {}".format(self.step, mean_psnr, mean_ssim))
         #print 'epochs is %d, mean_psnr is %f' %(self.step,mean_psnr1)
         #print mean_psnr#, mean_psnr1
         return mean_psnr
@@ -246,7 +247,7 @@ def psnr(im1, im2):
         
     im1 = im2double(im1)
     im2 = im2double(im2)
-    psnr = measure.compare_psnr(im1, im2, data_range=1)
+    psnr = metrics.peak_signal_noise_ratio(im1, im2, data_range=1)
     return psnr
 #tcw20190413022tcw
 def calculate_ssim(img1, img2, border=0):
